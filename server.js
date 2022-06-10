@@ -7,6 +7,10 @@ const PORT = 5000;
 app.use(express.json());
 app.use(cors());
 
+app.get("/", (req, res) => { 
+    res.send('API is working.....');
+});
+
 app.get("/api/generateReport", (req, res) => { 
     res.download('./pdf/Bill No 03 - Mr.Rohan Ambagolla.pdf');
 });
