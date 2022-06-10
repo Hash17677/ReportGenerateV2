@@ -15,6 +15,6 @@ app.get("/api/generateReport", (req, res) => {
     res.download('./pdf/Bill No 03 - Mr.Rohan Ambagolla.pdf');
 });
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
     console.log("Server is up and running on server on " + PORT);
 });
